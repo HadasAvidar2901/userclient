@@ -1,0 +1,64 @@
+/* סגנון לדף ההתחברות */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* רקע כהה לדף */
+}
+
+.login-container form {
+  background-color: #222; /* צבע כהה עבור הרקע של הטופס */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #444; /* צבע כהה של הצללה */
+  width: 300px;
+}
+
+/* סגנון לכותרת הדף */
+.login-container h1 {
+  color: #ffcc00; /* צהוב כהה */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* סגנון לתיאור של שדה מייל */
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffcc00; /* צהוב כהה */
+}
+
+/* סגנון לשדות הקלט */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #666; /* גבול כהה לשדות הקלט */
+  border-radius: 5px;
+  background-color: #444; /* רקע כהה לשדות הקלט */
+  color: #fff; /* טקסט לבן בתוך השדות */
+}
+
+/* סגנון לכפתור השליחה */
+.login-container input[type="submit"] {
+  background-color: #ffcc00; /* צהוב כהה */
+  color: black; /* טקסט שחור */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease; /* אנימציה לשינוי צבע רקע */
+}
+
+/* אנימציה לשינוי צבע רקע כשהעכבר עובר מעל */
+.login-container input[type="submit"]:hover {
+  background-color: #e6b800; /* צהוב כהה יותר */
+}
+
+/* סגנון להודעות שגיאה */
+span {
+  color: red; /* צבע שגיאה אדום */
+  font-size: 14px;
+}
