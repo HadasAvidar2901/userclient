@@ -1,0 +1,72 @@
+/* קביעת צבעים כלליים */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* רקע שחור לכל הדף */
+  color: #FFFFFF; /* טקסט לבן */
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  background-color: #333333; /* רקע אפור כהה לטופס */
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #FFFF00; /* צהוב לטקסט של תוויות */
+}
+
+.form-input {
+  width: calc(100% - 22px); /* הגבלת רוחב שדה הקלט פחות 22 פיקסלים (padding + border) */
+  max-width: 400px; /* רוחב מקסימלי לשדות הקלט */
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #FFFF00; /* גבול צהוב */
+  border-radius: 4px;
+  background-color: #222222; /* רקע כהה לשדות קלט */
+  color: #FFFFFF; /* טקסט לבן בשדות הקלט */
+}
+
+.form-input:focus {
+  border-color: #FFFF00; /* גבול צהוב כשממוקדים על שדה */
+  outline: none;
+  background-color: #333333; /* רקע כהה כשממוקדים על שדה */
+}
+
+.form-submit {
+  background-color: #FFFF00; /* רקע צהוב לכפתור שליחה */
+  color: #000000; /* טקסט שחור לכפתור שליחה */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #FFD700; /* צבע צהוב כהה יותר בהתרחשות */
+}
+
+.alert {
+  color: #FF0000; /* צבע אדום לשגיאות */
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+select.form-input {
+  cursor: pointer;
+}

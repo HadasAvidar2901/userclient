@@ -3,7 +3,11 @@ import './App.css';
 import SignUp from './features/user/signIn.js';
 import Login from './features/user/login.js';
 import AddAlert from './features/alert/addAlert.js';
-import Home from './home.js';
+import UpdateAlert from './features/alert/updateAlert.js';
+import DeleteAlert from './features/alert/deleteAlert.js';
+import AllAlert from './features/alert/allAlerts.js';
+import NavBarGuest from './NavBarGuest.js';
+import NavBarUser from './NavBarUser.js';
 import { useDispatch } from 'react-redux';
 import { userIn} from './features/user/userSlice';
 import { useEffect } from 'react';
@@ -14,6 +18,7 @@ function App() {
 
   const currentUser = useSelector(state => state.user.currentUser);
   let dispatch = useDispatch();
+  
 
   useEffect(() => {
     let u = localStorage.getItem("currentUser");
@@ -29,17 +34,23 @@ function App() {
   return (
     <div className="App">
       {/* {currentUser ? 
-  (currentUser.role === 'ADMIN' ? <NavBarManager /> : <NavBarUser />) 
-  : <NavBarGuest />} */}
-   
+  <AddAlert />: <Home />} */}
+    {currentUser ? <NavBarUser /> : <NavBarGuest />}
+
  
       
-       <Home/>
+      
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="alert" element={<AddAlert />}/>
+        
+        
         <Route path="signup" element={<SignUp/> }/>
         <Route path='login' element={<Login/>}/>
+
+        <Route path="addAlert" element={<AddAlert />}/>
+        <Route path='updateAlert' element={<UpdateAlert/>}/>
+        <Route path='deleteAlert' element={<DeleteAlert/>}/>
+        
+        <Route path='myAlerts' element={<AllAlert/>}/>
         {/* <Route path='exit' element={<Home/>}/> */}
         
         {/* <Route path='addProduct' element={

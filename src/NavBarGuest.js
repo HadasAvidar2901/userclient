@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { Link } from "react-router-dom";
-import './home.css';
+import './NavBarGuest.css';
 
 
-const Home = () => {
+const NavBarGuest = () => {
     return (
       <nav className="navbar-container">
         <div className="navbar-content">
@@ -22,4 +22,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default NavBarGuest;
